@@ -20,7 +20,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Set up Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
 
@@ -31,4 +31,4 @@ jobs:
     #   run: npm test
 
     - name: Build
-      run: npm run build
+      run: unset CI && npm run build
