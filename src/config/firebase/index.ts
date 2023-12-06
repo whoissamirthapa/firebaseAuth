@@ -7,8 +7,8 @@ export async function signUpWithEmail (email:string, password:string){
         return userCredential;
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        // const errorCode = error.code;
+        // const errorMessage = error.message;
         return error;
       });
 }
@@ -26,11 +26,11 @@ provider.addScope('email');
 const result = await signInWithPopup(auth, provider);
 
 // The signed-in user info.
-const user = result.user;
+// const user = result.user;
 console.log("result", result);
 // This gives you a Google Access Token.
 const credential = GoogleAuthProvider.credentialFromResult(result);
-const token = credential!.accessToken;
+// const token = credential!.accessToken;
   return {result, credential};
 }
 

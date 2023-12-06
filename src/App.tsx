@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Login from './Login'
-import { GoogleAuthProvider, signInWithCredential } from 'firebase/auth'
-import { auth } from '../firebase'
+// import { GoogleAuthProvider, signInWithCredential } from 'firebase/auth'
+// import { auth } from '../firebase'
 import Home from './Home'
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     const idToken = JSON.parse(localStorage.getItem("idToken") ?? "")
     if(accessToken){
       
-      const credential = GoogleAuthProvider.credential(idToken, accessToken);
+      // const credential = GoogleAuthProvider.credential(idToken, accessToken);
        
   // Sign in with the credential to validate the token
     // signInWithCredential(auth, credential).then((userCredential) => {

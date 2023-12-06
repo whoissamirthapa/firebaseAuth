@@ -7,8 +7,8 @@ import {
   signInWithPop,
 } from "../config/firebase";
 import Notification from "../components/Notification";
-import { GoogleAuthProvider, getAdditionalUserInfo, getAuth, verifyBeforeUpdateEmail } from "firebase/auth";
-import { app } from "../../firebase";
+// import { GoogleAuthProvider, getAdditionalUserInfo, getAuth, verifyBeforeUpdateEmail } from "firebase/auth";
+// import { app } from "../../firebase";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -62,7 +62,7 @@ const Login: React.FC = () => {
         const token = await res.user.getIdToken(true);
 
         const idTokenResult = await res.user.getIdTokenResult(true)
-        const resProvider = GoogleAuthProvider.credential(token, idTokenResult.token);
+        // const resProvider = GoogleAuthProvider.credential(token, idTokenResult.token);
         // console.log(resProvider);
         localStorage.setItem("uid", JSON.stringify(res.user.uid))
         localStorage.setItem("idToken", JSON.stringify(token))
